@@ -250,7 +250,7 @@ config_namespace! {
         /// concurrency.
         ///
         /// Defaults to the number of CPU cores on the system
-        pub target_partitions: usize, default = num_cpus::get()
+        pub target_partitions: usize, default = 1
 
         /// The default time zone
         ///

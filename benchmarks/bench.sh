@@ -311,6 +311,15 @@ data_tpch() {
         $CARGO_COMMAND --bin tpch -- convert --input "${TPCH_DIR}" --output "${TPCH_DIR}" --format parquet
         popd > /dev/null
     fi
+
+    cp ${TPCH_DIR}/lineitem/part-0.parquet ${TPCH_DIR}/lineitem.parquet
+    cp ${TPCH_DIR}/orders/part-0.parquet ${TPCH_DIR}/orders.parquet
+    cp ${TPCH_DIR}/part/part-0.parquet ${TPCH_DIR}/part.parquet
+    cp ${TPCH_DIR}/partsupp/part-0.parquet ${TPCH_DIR}/partsupp.parquet
+    cp ${TPCH_DIR}/customer/part-0.parquet ${TPCH_DIR}/customer.parquet
+    cp ${TPCH_DIR}/supplier/part-0.parquet ${TPCH_DIR}/supplier.parquet
+    cp ${TPCH_DIR}/nation/part-0.parquet ${TPCH_DIR}/nation.parquet
+    cp ${TPCH_DIR}/region/part-0.parquet ${TPCH_DIR}/region.parquet
 }
 
 # Runs the tpch benchmark
